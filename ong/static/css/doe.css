@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#logoT {
+    width: 300px;
+    position: relative;
+    left: 140px;
+    top: 5px;
+    z-index: 2;
+}
+
+#social {
+    position: relative;
+    left: 350px;
+    top: 6px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar > .nav-link {
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 300px;
+    top: 10px;
+    font-family: Hind;
+    font-size: 25px;
+}
+
+.navbar > a:hover {
+    color: black;
+}
+
+
+/* ---- 1) INTRO (título, texto, botão) ---- */
+.doacao-intro h2 {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #031823;
+  margin-bottom: 1rem;
+}
+
+.doacao-intro p {
+  font-family: Hind, sans-serif;
+  font-size: 1rem;
+  color: #031823;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.doacao-intro .btn-outline-primary {
+  border-radius: 24px;
+  padding: 8px 24px;
+  font-family: Hind, sans-serif;
+  font-weight: 600;
+  color: #2B357D;
+  border-color: #2B357D;
+  transition: background-color .2s, color .2s;
+}
+
+.doacao-intro .btn-outline-primary:hover {
+  background-color: #2B357D;
+  color: #fff;
+}
+
+/* ---- 2) SEÇÃO “Escolha como doar” ---- */
+.doacao-cards h3 {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 1.5rem;
+  color: #031823;
+}
+
+.doacao-cards p {
+  font-family: Hind, sans-serif;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ---- 3) CARTÕES DE DOAÇÃO ---- */
+.doacao-cards .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.doacao-cards .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.779);
+}
+
+.doacao-cards .card-body {
+  padding: 1.5rem;
+}
+
+.doacao-cards .card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: .75rem;
+  color: #031823;
+}
+
+.doacao-cards .card-text {
+  font-family: Hind, sans-serif;
+  font-size: .9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.doacao-cards .btn-sm {
+  border-radius: 20px;
+  font-family: Hind, sans-serif;
+  font-size: .875rem;
+  padding: .5rem 1rem;
+}
+
+.pix-card .btn-sm {
+  background-color: #2B357D;
+  color: #fff;
+  border: none;
+}
+.pix-card .btn-sm:hover {
+  background-color: #2B357D;
+}
+
+.boleto-card .btn-outline-primary {
+  border-radius: 20px;
+  font-family: Hind, sans-serif;
+  font-size: .875rem;
+}
+.boleto-card .btn-outline-primary:hover {
+  background-color: #2B357D;
+  color: #fff;
+}
+
+.boleto-card {
+  position: relative;
+  top: -270px;
+}
+
+.deposito-card .card-text + .card-text {
+  margin-top: 1rem;
+}
+
+.recorrente-card {
+  background-color: #2B357D;
+  border-radius: 12px;
+}
+.recorrente-card .card-body {
+  padding: 2rem;
+}
+.recorrente-card .card-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.recorrente-card .card-text,
+.recorrente-card .list-unstyled li {
+  font-family: Hind, sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: .5rem;
+}
+.recorrente-card .list-unstyled {
+  margin-bottom: 1.5rem;
+}
+.recorrente-card .btn-sm {
+  background-color: #fff;
+  color: #2B357D;
+  font-family: Hind, sans-serif;
+}
+.recorrente-card .btn-sm:hover {
+  background-color: #F5F5F5;
+}
+
+/* ---- 4) BOTÕES TRANSPARENTES + SOMBRA ---- */
+.btn-transparent {
+  background-color: rgba(255,255,255,0.8) !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important;
+  border-radius: 8px !important;
+  color: #031823 !important;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-transparent:hover {
+  background-color: rgba(255,255,255,1) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+}
+
+/* Botão Adote */
+.doacao-intro .btn-transparent {
+  padding: 8px 24px !important;
+  font-size: 1rem !important;
+}
+
+/* Botões Gerar QR e Quero DOAR */
+.btn-sm.btn-transparent {
+  padding: .5rem 1rem !important;
+  font-size: .875rem !important;
+}
+
+/* ---- 5) RESPONSIVIDADE ---- */
+@media (max-width: 767.98px) {
+  .doacao-intro h2 { font-size: 1.75rem; }
+  .pix-card, .boleto-card, .deposito-card {
+    margin-bottom: 1rem;
+  }
+  .recorrente-card {
+    margin-top: 2rem;
+  }
+}
+
+#termo {
+    text-decoration: underline;
+    position: absolute;
+}
+
+.bg-body-tertiary {
+    background-color: #2B357D !important;
+}
+
+.social_footer {
+    gap: 50px;
+}
+
+footer {
+    color: #fff;
+}
+
+.p-4 {
+    color: #000;
+}
+
+#footer_p {
+    font-size: 25px;
+    font-family: Hind;
+}
+
+.b_footer {
+    background-color: #6573D8;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+.b_footer:hover{
+    background-color: #4c559c;
+}
+
+/* ==== RESPONSIVIDADE ==== */
+
+/* Tablets e notebooks menores */
+@media (max-width: 992px) {
+  /* Navbar: centraliza e reduz gap */
+  .navbar {
+    left: 0 !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+  #logoT {
+    position: static;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  .navbar > .nav-link {
+    left: 0 !important;
+    top: 0 !important;
+    font-size: 20px;
+  }
+  #social {
+    position: static;
+    margin-top: 10px;
+  }
+  /* Banner ocupa menos altura */
+  #ban {
+    max-height: 300px;
+    object-fit: cover;
+  }
+  /* Cards em duas colunas no container principal */
+  .doacao-cards .row > .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  /* Corrige a posição do quarto card */
+  .boleto-card {
+    position: static !important;
+    top: 0 !important;
+    margin-top: 1.5rem;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Tablets menores / phablets */
+@media (max-width: 768px) {
+  /* Cards em coluna única */
+  .doacao-cards .row > .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .doacao-intro h2 {
+    font-size: 1.75rem;
+  }
+  .doacao-intro p {
+    font-size: 0.95rem;
+  }
+  .doacao-intro .btn {
+    padding: 6px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 576px) {
+  /* Reduz fontes e espaçamentos gerais */
+  .navbar > .nav-link {
+    font-size: 18px;
+  }
+  #logoT {
+    width: 150px;
+  }
+  #social {
+    display: none;
+  }
+  .doacao-intro h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .doacao-intro p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+  /* Padding extra para evitar cortes de texto */
+  .doacao-intro,
+  .doacao-cards {
+    padding: 0 1rem;
+  }
+  /* Cards empilhados e espaçamento extra */
+  .doacao-cards .row {
+    row-gap: 1.5rem;
+  }
+  .doacao-cards .row > .col-md-4 {
+    margin-bottom: 1rem;
+  }
+  /* Footer: centraliza todo mundo */
+  #termo {
+    position: static !important;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .social_footer {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .b_footer {
+    width: 100%;
+  }
+}

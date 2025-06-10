@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Hind;
+    src: url(../assets/fonts/Hind\ Kochi\ 400.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#logoT {
+    width: 300px;
+    position: relative;
+    left: 140px;
+    top: 5px;
+    z-index: 2;
+}
+
+#social {
+    position: relative;
+    left: 350px;
+    top: 6px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar > .nav-link {
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 300px;
+    top: 10px;
+    font-family: Hind;
+    font-size: 25px;
+}
+
+.navbar > a:hover {
+    color: black;
+}
+
+#termo {
+    text-decoration: underline;
+    position: absolute;
+}
+
+.bg-body-tertiary {
+    background-color: #2B357D !important;
+}
+
+.social_footer {
+    gap: 50px;
+}
+
+footer {
+    color: #fff;
+}
+
+.p-4 {
+    color: #000;
+}
+
+#footer_p {
+    font-size: 25px;
+    font-family: Hind;
+}
+
+.b_footer {
+    background-color: #6573D8;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+.b_footer:hover{
+    background-color: #4c559c;
+}
+
+#t1 {
+    font-family: Hind;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#t2 {
+    font-family: Hind;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/*=====================
+  Responsividade “Quem Somos”
+=====================*/
+
+/* Tablets e notebooks menores */
+@media (max-width: 992px) {
+  /* Navbar centralizada */
+  .navbar {
+    left: 0 !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+  #logoT {
+    position: static;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  .navbar > .nav-link {
+    left: 0 !important;
+    top: 0 !important;
+    font-size: 20px;
+  }
+  /* Banner ocupa menos altura */
+  #ban {
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  /* Container do texto ganha padding */
+  .section-container {
+    padding: 0 20px;
+  }
+  .text-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets menores / phablets */
+@media (max-width: 768px) {
+  /* Texto centralizado e com margem reduzida */
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  #t1, #t2 {
+    margin: 0 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 576px) {
+  /* Texto em fonte menor e preenchimento lateral */
+  #t1, #t2 {
+    font-size: 0.9rem;
+    margin: 0 15px;
+  }
+  /* Footer: termos e redes centralizados */
+  #termo {
+    position: static !important;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .social_footer {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  /* Botões do footer ocupam toda largura */
+  .b_footer {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logo.svg'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+          <a href="{% url 'home' %}">
+            <img src="{% static '/img/logoT.svg' %}">
+          </a>
+            <a href="{% url 'doe' %}" class="nav-link">Doações</a>
+            <a href="{% url 'adote'%}" class="nav-link">Adoção</a>
+            <a href="{% url 'ben' %}" class="nav-link">Quem Somos</a>
+            <a href="{% url 'contato' %}" class="nav-link">Contato</a>
+            <a href="" class="nav-link">Como Ajudar</a>
+        </nav>
+        <img src="{% static 'img/banner.png' %}" alt="" id="ban" width="100%">
+    </header>
+
+<br><br>
+
+    <main class="como-ajudar text-center py-5">
+      <div class="container">
+        <h2 class="titulo-ajuda mb-5">Como você pode ajudar ?</h2>
+        <div class="row justify-content-center">
+
+          <!-- Cartão 1: Doação -->
+          <div class="col-md-4 mb-4">
+            <div class="card-ajuda p-3 h-100 shadow rounded">
+              <img src="{% static 'img/doar1.png'%}" alt="Doação de alimentos" class="img-fluid rounded mb-3">
+              <h4>Doação de alimentos e Medicamentos</h4>
+              <br>
+              <p class="text-muted">
+                Sua doação de alimentos e medicamentos é essencial para o bem-estar dos animais. Contribua via PIX:
+                <strong>"CHAVE-PIX"</strong> ou entregue os itens diretamente em uma de nossas unidades.
+                Toda ajuda faz a diferença!
+              </p>
+              <a href="src/pages/doe.html" class="text-primary d-block">Doações ›</a>
+            </div>
+          </div>
+
+          <!-- Cartão 2: Lar Temporário -->
+          <div class="col-md-4 mb-4">
+            <div class="card-ajuda p-3 h-100 shadow rounded">
+              <img src="{% static 'img/lar.png'%}" alt="Lar temporário" class="img-fluid rounded mb-3">
+              <h4>Lar temporário</h4>
+              <br>
+              <p class="text-muted">
+                Ofereça um lar temporário para animais resgatados. Você proporciona um ambiente seguro e amoroso
+                enquanto eles aguardam por uma adoção definitiva.
+              </p>
+              <a href="#" class="text-primary">Ler mais ›</a>
+            </div>
+          </div>
+
+          <!-- Cartão 3: Adoção -->
+          <div class="col-md-4 mb-4">
+            <div class="card-ajuda p-3 h-100 shadow rounded">
+              <img src="{% static 'img/adote.pn'%}g" alt="Adoção de animais" class="img-fluid rounded mb-3">
+              <h4>Adoção</h4>
+              <br>
+              <p class="text-muted">
+                Adote um dos nossos peludos e ganhe um amigo fiel. Adotar é dar uma nova chance a um animal que só deseja
+                carinho e um lar amoroso.
+              </p>
+              <a href="#" class="text-primary d-block">Adote ›</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <section class="c_adote">
+    <div class="container p-5">
+      <h4 class="text-white mb-4" id="ct_adote">Adote</h4>
+
+      <!-- Filtros -->
+      <div class="pet-filter-container d-flex flex-column align-items-center justify-content-center mx-auto">
+        <div class="pet-tabs mb-auto mx-2">
+          <button class="tab-button">Todos</button>
+          <button class="tab-button">Cachorro</button>
+          <button class="tab-button">Gato</button>
+        </div>
+
+        <div class="pet-filters d-flex align-items-center gap-3 px-3 py-2 rounded">
+          <div class="dropdown">
+            <button class="btn filter-btn dropdown-toggle" data-bs-toggle="dropdown">Porte</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Pequeno</a></li>
+              <li><a class="dropdown-item" href="#">Médio</a></li>
+              <li><a class="dropdown-item" href="#">Grande</a></li>
+            </ul>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="dropdown">
+            <button class="btn filter-btn dropdown-toggle" data-bs-toggle="dropdown">Idade</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Filhote</a></li>
+              <li><a class="dropdown-item" href="#">Adulto</a></li>
+            </ul>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="dropdown">
+            <button class="btn filter-btn dropdown-toggle" data-bs-toggle="dropdown">Localização</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">São Paulo</a></li>
+              <li><a class="dropdown-item" href="#">Rio de Janeiro</a></li>
+              <li><a class="dropdown-item" href="#">Goiânia</a></li>
+            </ul>
+          </div>
+
+          <div class="ms-5">
+            <button class="btn btn-search">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+      <div class="icon">
+        <img src="{% static 'img/pata.svg '%}" id="pata1" alt="" width="400px" height="500px">
+        <img src="{% static 'img/pata2.svg'%}" id="pata2" alt="" width="200px" height="300px">
+        <img src="{% static 'img/osso.svg '%}" id="osso1" alt="" width="130px">
+        <img src="{% static 'img/osso2.svg'%}" id="osso2" alt="" width="130px">
+        <img src="{% static 'img/pote.svg '%}" id="pote" alt="" width="150px">
+        <img src="{% static 'img/peixe.svg'%}" id="peixe" alt="" width="130px">
+        
+      </div>
+      <!-- Cards -->
+      <div class="row justify-content-center g-4 mt-4">
+        <!-- Pet 1 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card pet-card">
+            <img src="{% static 'img/cao1.png'%}" class="card-img-top" alt="Pet" />
+            <div class="card-body text-center ">
+              <div class="d-flex gap-3 justify-content-center">
+                 <h5 class="card-title ">Nome</h5><h5 style="color: blue;" id="macho">♂</h5>
+              </div>
+              <p class="card-text">Porte Médio • Filhote<br>São Paulo</p>
+            </div>
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+        <!-- Pet 2 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card pet-card">
+            <img src="{% static 'img/gato1.png'%}" class="card-img-top" alt="Pet" />
+            <div class="card-body text-center">
+              <div class="d-flex gap-3 justify-content-center">
+                <h5 class="card-title">Nome</h5><h5 style="color: rgb(246, 123, 143);" id="fem">♀</h5>
+              </div>
+              <p class="card-text">Porte Pequeno • Filhote<br>São Paulo</p>
+            </div>
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+        <!-- Pet 3 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card pet-card">
+            <img src="{% static 'img/gato2.png'%}" class="card-img-top" alt="Pet" />
+            <div class="card-body text-center">
+              <div class="d-flex gap-3 justify-content-center">
+                <h5 class="card-title">Nome</h5><h5 style="color: blue;" id="macho">♂</h5>
+              </div>
+              <p class="card-text">Porte Médio • Filhote<br>São Paulo</p>
+            </div>
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+        <!-- Pet 4 -->
+        <br><p style="color: #3e4687">r</p>
+        <div class="col-md-4 col-lg-3">
+          <div class="card pet-card">
+            <img src="{% static 'img/cao2.png'%}" class="card-img-top" alt="Pet" />
+            <div class="card-body text-center">
+              <div class="d-flex gap-3 justify-content-center">
+                <h5 class="card-title">Nome</h5><h5 style="color: rgb(246, 123, 143);" id="fem">♀</h5>
+              </div>
+              <p class="card-text">Porte Médio • Filhote<br>São Paulo</p>
+            </div>
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+        <!-- Pet 5 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card pet-card">
+            <img src="{% static 'img/cao3.png'%}" class="card-img-top" alt="Pet" />
+            <div class="card-body text-center">
+              <div class="d-flex gap-3 justify-content-center">
+                <h5 class="card-title">Nome</h5><h5 style="color: rgb(246, 123, 143);" id="fem">♀</h5>
+              </div>
+              <p class="card-text">Porte Pequeno • Filhote<br>São Paulo</p>
+            </div>
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+        <!-- Pet 6 -->
+        <div class="col-md-4 col-lg-3">
+          <div class="card pet-card">
+            <img src="{% static 'img/gato3.png'%}" class="card-img-top" alt="Pet" />
+            <div class="card-body text-center">
+              <div class="d-flex gap-3 justify-content-center">
+                <h5 class="card-title">Nome</h5><h5 style="color: blue;" id="macho">♂</h5>
+              </div>
+              <p class="card-text">Porte Médio • Filhote<br>São Paulo</p>
+            </div>
+            <div class="heart-icon">♡</div>
+          </div>
+        </div>
+      </div>
+      <!-- Parte inferior -->
+      <div class="d-flex gap-3 justify-content-center pt-5">
+        <a class="text-white mb-0" id="c_texto" href="{% url 'adote' %}">Veja todos os pets para adoção</a>
+        <p id="c_seta" class="mb-auto">🠖</p>
+      </div>
+    </div>
+  </section>
+  <br><br><br>
+  <div class="section-container">
+    <img src="{% static 'img/ns.png'%}" alt="Cachorro feliz" />
+    <div class="text-content">
+      <h2>Nosso Trabalho</h2>
+      <p>
+        Acreditamos que todo animal merece amor, cuidado e uma segunda chance. Nossa ONG atua com dedicação no resgate, 
+        reabilitação e adoção responsável de cães e gatos em situação de abandono. 
+        Diariamente, enfrentamos histórias de sofrimento, mas também vivenciamos transformações emocionantes
+         — vidas salvas, lares construídos e laços formados.
+      </p>
+    </div>
+  </div>
+    <br><br><br><br><br>
+    <footer class="bg-body-tertiary text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-5">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <p id="footer_p">
+              <strong>
+                  Contribua da forma que puder para que esses animais tenham alimento ou uma nova casa.
+              </strong>
+            </p>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <a href="{% url 'doe' %}">
+              <button type="button" class="b_footer btn">Faça uma Doação 🠖</button>
+            </a>
+            <br><br>
+            <a href="{% url 'adote' %}" id="f_adote">OU <strong>ADOTE 🠖</strong></a>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+       <div class="d-flex justify-content-center">
+        <img src="{% static 'img/logo_footer.svg'%}" alt="">
+       </div>
+      <!-- Copyright -->
+      <div class="p-4" style="background-color: rgb(255, 255, 255);">
+          <div class="d-flex justify-content-center">
+              <p id="termo">Termos de Uso</p>
+          </div>
+          <div class="social_footer d-flex">
+              <img class="social" src="{% static 'img/twi_footer.svg'%}" alt=""  width="25px"> 
+              <img class="social" src="{% static 'img/face_footer.svg'%}" alt="" width="25px"> 
+              <img class="social" src="{% static 'img/insta_footer.svg'%}" alt=""width="25px">
+          </div>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/script.js'%}"></script>
+</body>
+</html>
